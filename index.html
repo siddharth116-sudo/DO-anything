@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily 5 Words</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>📘 Daily 5 Words</h1>
+      <p class="subtitle">Learn 5 simple English words every day.</p>
+      <p id="todayDate" class="today-date" aria-live="polite"></p>
+    </header>
+
+    <main class="container">
+      <section>
+        <div class="section-title-row">
+          <h2>Today’s Words</h2>
+          <span id="learnedTodayCount" class="pill">0 / 5 learned</span>
+        </div>
+        <div id="todayWords" class="card-grid" aria-live="polite"></div>
+      </section>
+
+      <section>
+        <div class="section-title-row">
+          <h2>Previously Learned Words</h2>
+          <button id="toggleReviewBtn" class="secondary-btn" type="button">
+            Show Review List
+          </button>
+        </div>
+        <div id="learnedWordsContainer" class="review-panel hidden"></div>
+      </section>
+    </main>
+
+    <template id="wordCardTemplate">
+      <article class="word-card">
+        <h3 class="word"></h3>
+        <p><strong>Pronunciation:</strong> <span class="pronunciation"></span></p>
+        <p><strong>Meaning:</strong> <span class="meaning"></span></p>
+        <p><strong>Example:</strong> <span class="example"></span></p>
+        <button class="learn-btn" type="button">Mark as Learned</button>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
